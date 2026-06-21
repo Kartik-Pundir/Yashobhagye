@@ -70,8 +70,10 @@ export default function Chatbot() {
         setIsLoading(false)
         if (data.content) {
           setMessages(prev => [...prev, { role: 'assistant', content: data.content }])
+        } else if (data.role === 'assistant') {
+          setMessages(prev => [...prev, { role: 'assistant', content: data.content || "Sorry, I couldn't process that." }])
         } else if (data.error) {
-          setMessages(prev => [...prev, { role: 'assistant', content: `Error: ${data.error}` }])
+          setMessages(prev => [...prev, { role: 'assistant', content: "Sorry, something went wrong. Please use our Contact form or call us at +91 81918 50001." }])
         }
         return
       }
