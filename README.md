@@ -1,36 +1,161 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+<img src="public/images/logo.jpg" alt="Yashobhagya Logo" width="100" height="100" style="border-radius: 50%;" />
 
-First, run the development server:
+# 🌿 Yashobhagya Enterprises
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### *Natural Energy. Reliable Supply. Every Time.*
+
+**Premium Biofuels · Natural Mineral Salts · Pan-India Logistics**
+
+[![Next.js](https://img.shields.io/badge/Next.js-16.2.9-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://typescriptlang.org)
+[![Prisma](https://img.shields.io/badge/Prisma-7.8-2D3748?style=for-the-badge&logo=prisma)](https://prisma.io)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com)
+
+</div>
+
+---
+
+## ✨ What is this?
+
+The **official full-stack business website** for Yashobhagya Enterprises — a Pan-India manufacturer and bulk supplier of:
+
+- 🪵 **Premium Seasoned Firewood** — Babul, Sisam, Liptis, Poplar & mixed varieties
+- 🧱 **Biomass Briquettes** — Mustard, Sawdust & Bagasse (eco-friendly fuel)
+- 🧂 **Natural Mineral Salts** — Black Salt (Kala Namak), Rock Salt (Sendha Namak) & Suzi Salt
+
+Built from the ground up with a focus on **performance, elegance, and business utility**.
+
+---
+
+## 🚀 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| **Framework** | Next.js 16 (App Router + Turbopack) |
+| **Language** | TypeScript 5 |
+| **Styling** | Tailwind CSS v4 + UnoCSS |
+| **Database** | PostgreSQL via Neon (serverless) |
+| **ORM** | Prisma 7 |
+| **Auth** | NextAuth v5 (credentials + role-based) |
+| **Email** | Nodemailer + Gmail SMTP |
+| **AI Chatbot** | Anthropic Claude (via AI SDK) |
+| **File Uploads** | Uploadthing |
+| **Animations** | Framer Motion + Three.js |
+| **Charts** | Recharts |
+
+---
+
+## 🎯 Key Features
+
+### 🏪 Public Website
+- Stunning animated homepage with 3D background (Three.js)
+- Full product catalog with categories and use cases
+- Contact & bulk quote request form
+- Photo gallery with lightbox
+- About, Why Us, and company story pages
+- WhatsApp direct connect integration
+- SEO optimized — sitemap.xml, robots.txt, full metadata
+
+### 📧 Automated Email System
+- **Enquiry confirmation** — customers get an instant branded email when they submit a query
+- **"We Will Reach You Soon"** — separate card for general enquiries
+- **Quote request confirmation** — detailed card for specific product requests with next steps
+- **Welcome email** — sent to new users on registration
+- All emails feature the company logo, brand colors, and contact details
+
+### 🤖 AI Sales Chatbot
+- Powered by Anthropic Claude
+- Answers product queries, pricing, and logistics questions
+- Captures chat leads automatically to the database
+
+### 🛠️ Admin Dashboard
+- Protected with role-based auth (Admin / Sub-Admin)
+- Manage enquiries, products, gallery, users & site settings
+- Analytics with charts
+- Drag-and-drop gallery reordering
+- Image upload via Uploadthing
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── (public pages)     # Home, Products, About, Contact, Gallery
+│   ├── admin/             # Protected admin dashboard
+│   ├── api/               # Auth + AI chat routes
+│   └── actions/           # Server actions (enquiry, register, admin)
+├── components/            # Reusable UI components
+└── lib/
+    ├── emails.ts          # Branded HTML email templates
+    ├── mailer.ts          # Nodemailer transporter
+    └── prisma.ts          # Prisma client singleton
+prisma/
+├── schema.prisma          # DB schema
+└── seed.ts                # Database seeder
+public/images/             # Product & company images
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Clone the repo
+git clone https://github.com/Kartik-Pundir/Yashobhagye.git
+cd Yashobhagye
 
-## Learn More
+# Install dependencies
+npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Set up environment variables
+cp .env.example .env
+# Fill in your DATABASE_URL, AUTH_SECRET, GMAIL credentials, etc.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Push database schema
+npx prisma db push
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Seed the database
+npx prisma db seed
 
-## Deploy on Vercel
+# Start development server
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🔐 Environment Variables
+
+```env
+DATABASE_URL=           # PostgreSQL connection string (Neon recommended)
+AUTH_SECRET=            # NextAuth signing secret
+NEXTAUTH_URL=           # App URL
+ANTHROPIC_API_KEY=      # Claude AI for chatbot
+GMAIL_USER=             # Gmail address for sending emails
+GMAIL_APP_PASSWORD=     # Gmail App Password (16 chars)
+UPLOADTHING_SECRET=     # Uploadthing file upload secret
+UPLOADTHING_APP_ID=     # Uploadthing app ID
+```
+
+---
+
+## 🏢 About Yashobhagya Enterprises
+
+Headquartered across **Roorkee (Uttarakhand)** and **Saharanpur (Uttar Pradesh)**, Yashobhagya Enterprises operates its own processing plant in Gangalhedi and runs self-owned transport logistics for Pan-India delivery.
+
+> *Delivering quality natural resources to industries, institutions, and bulk buyers across India.*
+
+📞 **+91 81918 50001** &nbsp;|&nbsp; 🕐 Mon–Sat, 9 AM – 7 PM IST
+
+---
+
+<div align="center">
+
+**Built with ❤️ for Yashobhagya Enterprises**
+
+</div>
