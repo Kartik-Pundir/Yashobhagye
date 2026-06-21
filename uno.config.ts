@@ -2,27 +2,17 @@ import {
   defineConfig,
   presetWind,
   presetIcons,
-  presetWebFonts,
   transformerDirectives,
   transformerVariantGroup
 } from 'unocss'
 
 export default defineConfig({
   presets: [
-    presetWind(), // Wind preset provides full Tailwind CSS utility compatibility
+    presetWind(),
     presetIcons({
       scale: 1.2,
       cdn: 'https://esm.sh/'
     }),
-    presetWebFonts({
-      provider: 'google',
-      fonts: {
-        serif: 'Playfair Display',
-        sans: 'Inter',
-        mono: 'Fira Code',
-        title: 'DM Sans'
-      }
-    })
   ],
   transformers: [
     transformerDirectives(),
