@@ -40,6 +40,20 @@ async function main() {
   })
   console.log(`Created default Sub-Admin user: ${subAdmin.email}`)
 
+  // 3. Create Kartik Pundir as Admin (upsert — safe if already exists)
+  const kartikPassword = await bcrypt.hash('kartik123', 10)
+  const kartik = await prisma.user.upsert({
+    where: { email: 'kartikpundir231@gmail.com' },
+    update: { role: Role.ADMIN },
+    create: {
+      name: 'Kartik Pundir',
+      email: 'kartikpundir231@gmail.com',
+      password: kartikPassword,
+      role: Role.ADMIN,
+    },
+  })
+  console.log(`Kartik Pundir set as Admin: ${kartik.email}`)
+
   // 4. Create default SiteSettings
   const settings = await prisma.siteSetting.create({
     data: {

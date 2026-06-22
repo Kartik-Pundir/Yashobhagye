@@ -40,9 +40,9 @@ export default async function AdminLayout({
   const isStrictAdmin = user?.role === 'ADMIN'
 
   return (
-    <div className="min-h-screen flex bg-[#F9F6F0] font-sans">
+    <div className="fixed inset-0 z-50 flex bg-[#F9F6F0] font-sans overflow-hidden">
       {/* Sidebar */}
-      <aside className="w-64 bg-[#1C1C1C] text-white flex flex-col border-r border-[#E8D5B0]/10 bg-grain shrink-0">
+      <aside className="w-64 bg-[#1C1C1C] text-white flex flex-col border-r border-[#E8D5B0]/10 bg-grain shrink-0 overflow-y-auto">
         {/* Sidebar Header */}
         <div className="p-6 border-b border-[#E8D5B0]/10 flex flex-col">
           <Link href="/" className="flex flex-col">
@@ -114,7 +114,7 @@ export default async function AdminLayout({
       </aside>
 
       {/* Main Content Pane */}
-      <main className="flex-1 flex flex-col overflow-y-auto">
+      <main className="flex-1 flex flex-col overflow-y-auto min-h-0">
         <header className="h-16 border-b border-gray-200/60 bg-white flex items-center justify-between px-8 bg-grain shrink-0">
           <h1 className="font-serif text-lg font-bold text-[#1A3C2E]">Yashobhagya Management Console</h1>
           <div className="flex items-center gap-3">
