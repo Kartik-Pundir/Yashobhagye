@@ -216,7 +216,8 @@ export default function Home() {
                     alt={client.name}
                     width={120}
                     height={60}
-                    className="object-contain max-h-16 w-auto grayscale group-hover:grayscale-0 transition-all duration-500 opacity-70 group-hover:opacity-100"
+                    sizes="120px"
+                    className="object-contain max-h-16 w-auto transition-all duration-500"
                   />
                 </div>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 group-hover:text-[#1A3C2E] transition text-center font-title">
