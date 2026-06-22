@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ThreeBackground from '@/components/ThreeBackground'
 import HomeClient from '@/components/HomeClient'
-import { Flame, ShieldCheck, Truck, Scale, ArrowUpRight, MessageCircle, Mail } from 'lucide-react'
+import { Flame, ShieldCheck, Truck, Scale, ArrowUpRight, MessageCircle, Mail, Layers, RefreshCw } from 'lucide-react'
 
 export const dynamic = 'force-dynamic'
 
