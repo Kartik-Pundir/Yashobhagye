@@ -186,40 +186,57 @@ export default function Home() {
               Trusted by Industry Leaders
             </h3>
             <p className="mt-4 text-sm text-gray-600 font-sans leading-relaxed">
-              We supply biofuel energies and raw mineral resources to over 50+ manufacturing plants, food processing units, and paper mills across India. Here are some of our key clients:
+              We supply biofuel energies and raw mineral resources to over 50+ manufacturing plants, food processing units, and paper mills across India.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {/* Logo Grid — with real logos */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mb-10">
             {[
-              { name: "Panchvati Private Ltd", icon: <Sprout className="w-5 h-5 text-emerald-600" />, color: "bg-emerald-50 text-emerald-700" },
-              { name: "Attero Recycle Pvt Ltd", icon: <RefreshCw className="w-5 h-5 text-blue-600" />, color: "bg-blue-50 text-blue-700" },
-              { name: "Cleena Industries Pvt Ltd", icon: <ShieldCheck className="w-5 h-5 text-teal-600" />, color: "bg-teal-50 text-teal-700" },
-              { name: "Standard Milk Product", icon: <CupSoda className="w-5 h-5 text-sky-600" />, color: "bg-sky-50 text-sky-700" },
-              { name: "Metro Frozen Folkks Food Pvt Ltd", icon: <ChefHat className="w-5 h-5 text-indigo-600" />, color: "bg-indigo-50 text-indigo-700" },
-              { name: "Green Grahi Solution Pvt Ltd", icon: <Leaf className="w-5 h-5 text-green-600" />, color: "bg-green-50 text-green-700" },
-              { name: "Shree Sumati Sugar Pvt Ltd", icon: <Candy className="w-5 h-5 text-amber-600" />, color: "bg-amber-50 text-amber-700" },
-              { name: "Naruma Industries Pvt Ltd", icon: <Settings className="w-5 h-5 text-orange-600" />, color: "bg-orange-50 text-orange-700" },
-              { name: "Green Pine Industries Pvt Ltd", icon: <Trees className="w-5 h-5 text-emerald-700" />, color: "bg-emerald-50 text-emerald-800" },
-              { name: "Livgreen Cleantech Pvt Ltd", icon: <Zap className="w-5 h-5 text-yellow-600" />, color: "bg-yellow-50 text-yellow-700" },
-              { name: "Prominat Fibre Pvt Ltd", icon: <Layers className="w-5 h-5 text-purple-600" />, color: "bg-purple-50 text-purple-700" },
-              { name: "Lifestick Pharmaceuticals Pvt Ltd", icon: <Activity className="w-5 h-5 text-red-600" />, color: "bg-red-50 text-red-700" }
+              { src: '/images/client-cleena.jpg', name: 'Cleena Industries' },
+              { src: '/images/client-green-pine.jpg', name: 'Green Pine Industries' },
+              { src: '/images/client-attero.jpg', name: 'Attero Recycling' },
+              { src: '/images/client-green-grahi.png', name: 'Green Grahi Solutions' },
+              { src: '/images/client-lifesticks.jpg', name: 'Lifesticks' },
             ].map((client, idx) => (
               <div
                 key={idx}
-                className="bg-white border border-gray-100/80 rounded-xl p-5 flex items-center gap-4 shadow-sm hover:shadow-md hover:border-[#E8D5B0] hover:scale-[1.02] transition-all duration-300 min-h-[96px] bg-grain group"
+                className="bg-white border border-gray-100 rounded-2xl p-5 flex flex-col items-center justify-center gap-3 shadow-sm hover:shadow-lg hover:border-[#E8D5B0] hover:-translate-y-1 transition-all duration-300 group min-h-[140px]"
               >
-                <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${client.color} group-hover:scale-110 transition duration-300`}>
+                <div className="relative w-full h-16 flex items-center justify-center">
+                  <Image
+                    src={client.src}
+                    alt={client.name}
+                    width={120}
+                    height={60}
+                    className="object-contain max-h-16 w-auto grayscale group-hover:grayscale-0 transition-all duration-500 opacity-70 group-hover:opacity-100"
+                  />
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 group-hover:text-[#1A3C2E] transition text-center font-title">
+                  {client.name}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Remaining text-only clients */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {[
+              { name: "Panchvati Private Ltd", icon: <Sprout className="w-4 h-4" />, color: "text-emerald-600 bg-emerald-50" },
+              { name: "Standard Milk Product", icon: <CupSoda className="w-4 h-4" />, color: "text-sky-600 bg-sky-50" },
+              { name: "Metro Frozen Folkks Food", icon: <ChefHat className="w-4 h-4" />, color: "text-indigo-600 bg-indigo-50" },
+              { name: "Shree Sumati Sugar Pvt Ltd", icon: <Candy className="w-4 h-4" />, color: "text-amber-600 bg-amber-50" },
+              { name: "Naruma Industries Pvt Ltd", icon: <Settings className="w-4 h-4" />, color: "text-orange-600 bg-orange-50" },
+              { name: "Livgreen Cleantech Pvt Ltd", icon: <Zap className="w-4 h-4" />, color: "text-yellow-600 bg-yellow-50" },
+              { name: "Prominat Fibre Pvt Ltd", icon: <Layers className="w-4 h-4" />, color: "text-purple-600 bg-purple-50" },
+            ].map((client, idx) => (
+              <div key={idx} className="bg-white border border-gray-100 rounded-xl px-4 py-3 flex items-center gap-3 shadow-sm hover:shadow-md hover:border-[#E8D5B0] transition-all duration-200 group">
+                <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${client.color}`}>
                   {client.icon}
                 </div>
-                <div className="text-left">
-                  <h4 className="font-serif text-sm font-bold text-[#1A3C2E] leading-tight">
-                    {client.name}
-                  </h4>
-                  <span className="text-[9px] uppercase tracking-wider text-gray-400 font-semibold block mt-0.5">
-                    Verified Partner
-                  </span>
-                </div>
+                <span className="text-xs font-semibold text-gray-600 group-hover:text-[#1A3C2E] transition font-sans leading-tight">
+                  {client.name}
+                </span>
               </div>
             ))}
           </div>
