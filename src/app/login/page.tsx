@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { signIn } from 'next-auth/react'
-import { Mail, Lock, ArrowRight, AlertCircle, CheckCircle, HelpCircle } from 'lucide-react'
+import { Mail, Lock, ArrowRight, AlertCircle, CheckCircle } from 'lucide-react'
 
 export default function LoginPage() {
   const router = useRouter()
@@ -123,16 +123,6 @@ export default function LoginPage() {
             </button>
           </div>
         </form>
-
-        {/* Demo Credentials Info Alert */}
-        <div className="p-3.5 rounded-lg text-xs bg-amber-50/50 text-amber-800 border border-amber-200/50 flex gap-2">
-          <HelpCircle size={16} className="shrink-0 mt-0.5" />
-          <div className="space-y-1 text-[11px]">
-            <p className="font-semibold">Default Credentials:</p>
-            <p><strong>Admin:</strong> admin@yashobhagya.com | adminpassword123</p>
-            <p><strong>Sub-Admin:</strong> subadmin@yashobhagya.com | subadmin123</p>
-          </div>
-        </div>
 
         {/* Footer Redirect */}
         <div className="text-center pt-2 border-t border-gray-100 text-xs text-gray-500">
