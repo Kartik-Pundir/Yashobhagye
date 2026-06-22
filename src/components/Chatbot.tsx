@@ -234,23 +234,41 @@ export default function Chatbot() {
 
             {/* Quick Actions */}
             <div className="px-4 py-2 bg-gray-50 border-t border-gray-100 flex gap-2 overflow-x-auto whitespace-nowrap scrollbar-none">
-              <button
-                onClick={() => sendMessage("I need a price quote.")}
-                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm"
-              >
+              <button onClick={() => sendMessage("I need a price quote.")}
+                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
                 Get Quote 📋
               </button>
-              <button
-                onClick={() => sendMessage("What briquettes do you supply?")}
-                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm"
-              >
-                Briquettes Info 🔥
+              <button onClick={() => sendMessage("What firewood varieties do you supply?")}
+                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
+                Firewood 🪵
               </button>
-              <button
-                onClick={() => sendMessage("Where do you deliver?")}
-                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm"
-              >
-                Delivery Area 🚚
+              <button onClick={() => sendMessage("What briquettes do you supply?")}
+                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
+                Briquettes 🔥
+              </button>
+              <button onClick={() => sendMessage("Tell me about your salt products.")}
+                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
+                Salts 🧂
+              </button>
+              <button onClick={() => sendMessage("Where do you deliver?")}
+                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
+                Delivery 🚚
+              </button>
+              <button onClick={() => sendMessage("What is your minimum order quantity?")}
+                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
+                Min Order 📦
+              </button>
+              <button onClick={() => sendMessage("What are your payment terms?")}
+                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
+                Payment 💳
+              </button>
+              <button onClick={() => sendMessage("Where is your office located?")}
+                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
+                Our Office 📍
+              </button>
+              <button onClick={() => sendMessage("How can I contact you?")}
+                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
+                Contact Us 📞
               </button>
             </div>
 

@@ -27,23 +27,41 @@ export async function POST(req: Request) {
       const hasContact = text.includes("contact") || text.includes("email") || text.includes("phone") || text.includes("number") || text.includes("whatsapp") || text.includes("call")
       const hasProducts = text.includes("product") || text.includes("catalog") || text.includes("offering") || text.includes("list") || text.includes("sell") || text.includes("supply") || text.includes("variety")
       const hasGreeting = text.includes("hello") || text.includes("hi") || text.includes("hey") || text.includes("welcome")
+      const hasMinOrder = text.includes("minimum") || text.includes("min order") || text.includes("minimum order") || text.includes("moq") || text.includes("least quantity") || text.includes("small order")
+      const hasPayment = text.includes("payment") || text.includes("pay") || text.includes("advance") || text.includes("credit") || text.includes("upi") || text.includes("bank") || text.includes("neft") || text.includes("rtgs") || text.includes("cheque")
+      const hasSample = text.includes("sample") || text.includes("trial") || text.includes("test") || text.includes("demo")
+      const hasQuality = text.includes("quality") || text.includes("certif") || text.includes("iso") || text.includes("standard") || text.includes("grade") || text.includes("specification") || text.includes("moisture") || text.includes("calorific")
+      const hasAbout = text.includes("about") || text.includes("company") || text.includes("yashobhagya") || text.includes("who are you") || text.includes("tell me about") || text.includes("your business")
+      const hasTime = text.includes("time") || text.includes("hours") || text.includes("open") || text.includes("when") || text.includes("timing") || text.includes("available")
 
-      if (hasBriquette) {
+      if (hasMinOrder) {
+        reply = "Our minimum order quantity is:\n• Firewood: 5 Metric Tons (MT)\n• Biomass Briquettes: 3 MT\n• Salts: 1 MT\n\nFor larger contract volumes (monthly 50+ MT), we offer special pricing and dedicated account managers. Please share your name and phone number to discuss your requirements!"
+      } else if (hasPayment) {
+        reply = "We accept all major payment modes:\n• Bank Transfer (NEFT/RTGS)\n• UPI / Google Pay\n• Cheque (for registered buyers)\n• 30-day credit terms available for verified bulk buyers\n\nFor new clients, we typically require 50% advance and 50% on dispatch. Share your name and phone to discuss credit terms with our sales team!"
+      } else if (hasSample) {
+        reply = "Yes, we provide samples! Here's how:\n• Briquettes: 10-20 kg sample bags available\n• Firewood: Small bundles for calorific testing\n• Salts: 1-5 kg sample pouches\n\nSamples are dispatched via courier at actual freight cost. Please share your name, phone number, and delivery address and we'll arrange it right away!"
+      } else if (hasQuality) {
+        reply = "Our products meet strict quality standards:\n• Firewood: Moisture content below 15%, seasoned for 6+ months\n• Briquettes: Calorific value 3800-4500 Kcal/kg, ash content below 8%\n• Salts: Processed at our certified Gangalhedi factory\n\nWe provide quality test reports and certificates on request. Share your name and phone number for detailed specifications!"
+      } else if (hasAbout) {
+        reply = "Yashobhagya Enterprises is a Pan-India manufacturer and bulk supplier of premium biofuels and natural mineral salts. Founded and operated from Roorkee (Uttarakhand) and Saharanpur (Uttar Pradesh), we run our own processing plant in Gangalhedi and a self-owned fleet of 20+ cargo trucks for direct delivery across India. We serve 50+ industries including food processing, brick kilns, sugar mills, and pharmaceutical companies. How can we help you today?"
+      } else if (hasTime) {
+        reply = "Our business hours are Monday to Saturday, 9:00 AM to 7:00 PM IST. You can reach us at +91 81918 50001 or WhatsApp us at wa.me/918191850001 anytime — we respond within 2 hours during business hours. Would you like us to call you back at a specific time?"
+      } else if (hasBriquette) {
         reply = "We manufacture high-density biomass briquettes in bulk: Mustard husk, Wood sawdust, and Sugarcane Bagasse briquettes. They are highly efficient coal replacements for boilers, brick kilns, and metal furnaces. We ship in bulk PAN India. Could you please share your name and phone number so our sales division can calculate a freight and volume quote?"
       } else if (hasFirewood) {
         reply = "We supply seasoned Liptis (Eucalyptus), Poppler (Poplar), Mix Wood, Sheesham (Sisam), and Babul logs. We size them to fit your boiler or kiln requirements and deliver PAN India. Would you like a price estimate? Please share your name and phone number!"
       } else if (hasSalt) {
         reply = "Our salt lineup includes Rock Salt (Sendha Namak), processed Black Salt (Kala Namak), Suzi Salt, and bulk Natural Mineral Salts. They are processed at our Gangalhedi factory. What volume are you looking for? Share your name and phone number, and our sales team will get back to you shortly!"
       } else if (hasAddress) {
-        reply = "We have branch offices in Roorkee (Sakumbari Enclave) and Saharanpur (Capil Vihar Colony), and our main processing factory is located in Gangalhedi, Saharanpur, UP (PIN 247341). Our contact email is pundirranjeet@gmail.com. Can I help you request a quote for your area? Please share your name and phone number!"
+        reply = "We have branch offices in Roorkee (Sakumbari Enclave) and Saharanpur (Kapil Vihar Colony), and our main processing factory is located in Gangalhedi, Saharanpur, UP (PIN 247341). Our contact email is pundirranjeet@gmail.com. Can I help you request a quote for your area? Please share your name and phone number!"
       } else if (hasDelivery) {
         reply = "Yashobhagya Enterprises guarantees PAN India delivery! We manage shipping using our self-owned transport truck fleet of over 20 cargo trucks directly from our Gangalhedi processing unit. Please share your name, phone number, and delivery pin code so we can quote you shipping rates."
       } else if (hasPrice) {
         reply = "We offer competitive contract-based wholesale pricing based on your monthly requirements. To provide a precise quote, please share your name, phone number, product interest, and monthly volume requirement."
       } else if (hasContact) {
-        reply = "You can reach us at pundirranjeet@gmail.com or via phone at +91 81918 50001. We are open Monday to Saturday, 9:00 AM to 6:00 PM. Would you like a callback? Please share your name and phone number."
+        reply = "You can reach us at pundirranjeet@gmail.com or via phone at +91 81918 50001. We are open Monday to Saturday, 9:00 AM to 7:00 PM IST. Would you like a callback? Please share your name and phone number."
       } else if (hasProducts) {
-        reply = "Yashobhagya Enterprises is a leading supplier of: \n1. Biofuels: Seasoned Firewood (Liptis, Poplar, Mix Wood, Sheesham, Babul) and Biomass Briquettes (Mustard, Sawdust, Bagasse).\n2. Salts: Black Salt (Kala Namak), Rock Salt (Sendha Namak), Suzi Salt, and bulk Natural Mineral Salts.\nAll materials are processed directly in our own facilities and delivered PAN India. Please share your name and phone number to request samples or get a callback!"
+        reply = "Yashobhagya Enterprises supplies:\n1. Biofuels: Seasoned Firewood (Liptis, Poplar, Mix Wood, Sheesham, Babul) and Biomass Briquettes (Mustard, Sawdust, Bagasse).\n2. Salts: Black Salt (Kala Namak), Rock Salt (Sendha Namak), Suzi Salt, and bulk Natural Mineral Salts.\nAll materials are processed in our own facilities and delivered PAN India. Please share your name and phone number to request samples or get a callback!"
       } else if (hasGreeting) {
         reply = "Hello! Welcome to Yashobhagya Enterprises. We manufacture and supply premium biofuels (biomass briquettes, split seasoned firewood logs) and natural mineral salts in bulk. How can I help you today? Please share your name and phone number to request a quote or callback!"
       } else {
