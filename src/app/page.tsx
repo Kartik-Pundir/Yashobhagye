@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ThreeBackground from '@/components/ThreeBackground'
 import HomeClient from '@/components/HomeClient'
-import { Flame, ShieldCheck, Truck, Scale, RefreshCw, Layers, ArrowUpRight, MessageCircle, Mail, Sprout, Leaf, Settings, Trees, Zap, Activity, CupSoda, ChefHat, Candy } from 'lucide-react'
+import { Flame, ShieldCheck, Truck, Scale, ArrowUpRight, MessageCircle, Mail } from 'lucide-react'
 
 export const dynamic = 'force-dynamic'
 
@@ -190,14 +190,21 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Logo Grid — with real logos */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mb-10">
+          {/* Logo Grid — all real logos */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
               { src: '/images/client-cleena.jpg', name: 'Cleena Industries' },
               { src: '/images/client-green-pine.jpg', name: 'Green Pine Industries' },
               { src: '/images/client-attero.jpg', name: 'Attero Recycling' },
               { src: '/images/client-green-grahi.png', name: 'Green Grahi Solutions' },
               { src: '/images/client-lifesticks.jpg', name: 'Lifesticks' },
+              { src: '/images/client-livgreen.jpg', name: 'Livgreen Solid Bio Fuel' },
+              { src: '/images/client-metro.jpg', name: 'Metro Foods' },
+              { src: '/images/client-naruma.png', name: 'Naruma Industries' },
+              { src: '/images/client-panchvati.jpg', name: 'Panchvati Pvt Ltd' },
+              { src: '/images/client-prominent.png', name: 'Prominent Fibres Pvt Ltd' },
+              { src: '/images/client-standard.jpg', name: 'Standard Dairy' },
+              { src: '/images/client-sumati.jpg', name: 'Shree Sumati Sugar' },
             ].map((client, idx) => (
               <div
                 key={idx}
@@ -213,28 +220,6 @@ export default function Home() {
                   />
                 </div>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 group-hover:text-[#1A3C2E] transition text-center font-title">
-                  {client.name}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Remaining text-only clients */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-            {[
-              { name: "Panchvati Private Ltd", icon: <Sprout className="w-4 h-4" />, color: "text-emerald-600 bg-emerald-50" },
-              { name: "Standard Milk Product", icon: <CupSoda className="w-4 h-4" />, color: "text-sky-600 bg-sky-50" },
-              { name: "Metro Frozen Folkks Food", icon: <ChefHat className="w-4 h-4" />, color: "text-indigo-600 bg-indigo-50" },
-              { name: "Shree Sumati Sugar Pvt Ltd", icon: <Candy className="w-4 h-4" />, color: "text-amber-600 bg-amber-50" },
-              { name: "Naruma Industries Pvt Ltd", icon: <Settings className="w-4 h-4" />, color: "text-orange-600 bg-orange-50" },
-              { name: "Livgreen Cleantech Pvt Ltd", icon: <Zap className="w-4 h-4" />, color: "text-yellow-600 bg-yellow-50" },
-              { name: "Prominat Fibre Pvt Ltd", icon: <Layers className="w-4 h-4" />, color: "text-purple-600 bg-purple-50" },
-            ].map((client, idx) => (
-              <div key={idx} className="bg-white border border-gray-100 rounded-xl px-4 py-3 flex items-center gap-3 shadow-sm hover:shadow-md hover:border-[#E8D5B0] transition-all duration-200 group">
-                <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${client.color}`}>
-                  {client.icon}
-                </div>
-                <span className="text-xs font-semibold text-gray-600 group-hover:text-[#1A3C2E] transition font-sans leading-tight">
                   {client.name}
                 </span>
               </div>
