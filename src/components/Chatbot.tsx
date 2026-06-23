@@ -255,16 +255,6 @@ export default function Chatbot() {
               <button onClick={() => sendMessage("Tell me about your company.")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">About Us 🏢</button>
             </div>
 
-            {/* Input Form */}              <button onClick={() => sendMessage("Tell me about your quality standards.")}
-                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
-                Quality 🏅
-              </button>
-              <button onClick={() => sendMessage("What products are good for industrial boilers?")}
-                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
-                Industrial Use 🏗️
-              </button>
-            </div>
-
             {/* Input Form */}
             <form onSubmit={handleSubmit} className="p-3 bg-white border-t border-gray-200 flex gap-2 items-center">
               <input
