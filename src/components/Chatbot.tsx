@@ -234,41 +234,34 @@ export default function Chatbot() {
 
             {/* Quick Actions */}
             <div className="px-4 py-2 bg-gray-50 border-t border-gray-100 flex gap-2 overflow-x-auto whitespace-nowrap scrollbar-none">
-              <button onClick={() => sendMessage("I need a price quote.")}
+              <button onClick={() => sendMessage("I need a price quote.")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Get Quote 📋</button>
+              <button onClick={() => sendMessage("What firewood varieties do you supply?")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Firewood 🪵</button>
+              <button onClick={() => sendMessage("What briquettes do you supply?")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Briquettes 🔥</button>
+              <button onClick={() => sendMessage("Tell me about your salt products.")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Salts 🧂</button>
+              <button onClick={() => sendMessage("Where do you deliver?")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Delivery 🚚</button>
+              <button onClick={() => sendMessage("What is your minimum order quantity?")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Min Order 📦</button>
+              <button onClick={() => sendMessage("What are your payment terms?")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Payment 💳</button>
+              <button onClick={() => sendMessage("Where is your office located?")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Our Office 📍</button>
+              <button onClick={() => sendMessage("How can I contact you?")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Contact Us 📞</button>
+              <button onClick={() => sendMessage("Do you have ready stock?")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Ready Stock 🏭</button>
+              <button onClick={() => sendMessage("Do you provide GST invoice?")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">GST Invoice 🧾</button>
+              <button onClick={() => sendMessage("Tell me about your eco friendly products.")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Eco Friendly 🌿</button>
+              <button onClick={() => sendMessage("I want bulk wholesale supply.")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Bulk Order 🏗️</button>
+              <button onClick={() => sendMessage("Can I get a sample?")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Get Sample 🎁</button>
+              <button onClick={() => sendMessage("What packaging options do you offer?")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Packaging 📦</button>
+              <button onClick={() => sendMessage("Tell me about your quality standards.")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Quality 🏅</button>
+              <button onClick={() => sendMessage("What products are good for industrial boilers?")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Industrial Use ⚙️</button>
+              <button onClick={() => sendMessage("Can you customize products as per my requirement?")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">Custom Order 🎯</button>
+              <button onClick={() => sendMessage("Tell me about your company.")} className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">About Us 🏢</button>
+            </div>
+
+            {/* Input Form */}              <button onClick={() => sendMessage("Tell me about your quality standards.")}
                 className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
-                Get Quote 📋
+                Quality 🏅
               </button>
-              <button onClick={() => sendMessage("What firewood varieties do you supply?")}
+              <button onClick={() => sendMessage("What products are good for industrial boilers?")}
                 className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
-                Firewood 🪵
-              </button>
-              <button onClick={() => sendMessage("What briquettes do you supply?")}
-                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
-                Briquettes 🔥
-              </button>
-              <button onClick={() => sendMessage("Tell me about your salt products.")}
-                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
-                Salts 🧂
-              </button>
-              <button onClick={() => sendMessage("Where do you deliver?")}
-                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
-                Delivery 🚚
-              </button>
-              <button onClick={() => sendMessage("What is your minimum order quantity?")}
-                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
-                Min Order 📦
-              </button>
-              <button onClick={() => sendMessage("What are your payment terms?")}
-                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
-                Payment 💳
-              </button>
-              <button onClick={() => sendMessage("Where is your office located?")}
-                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
-                Our Office 📍
-              </button>
-              <button onClick={() => sendMessage("How can I contact you?")}
-                className="px-2.5 py-1.5 bg-white border border-gray-200 rounded-md text-xs hover:border-[#C4862A] hover:text-[#C4862A] transition font-medium text-gray-600 shadow-sm">
-                Contact Us 📞
+                Industrial Use 🏗️
               </button>
             </div>
 
