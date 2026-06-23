@@ -79,7 +79,7 @@ const testimonials: Testimonial[] = [
     name: "Dr. Ritu Goel",
     role: "Quality Assurance Head",
     company: "Metro Frozen Folkks Food Pvt Ltd",
-    content: "We source our bulk Black Salt (Kala Namak) and Rock Salt (Sendha Namak) ingredients exclusively from Yashobhagya. The purity levels are pristine, free of contaminants, and processed to exact food-grade standards at their Gangalhedi unit.",
+    content: "We source our bulk Black Salt (Kala Namak) and Rock Salt (Sendha Namak) ingredients exclusively from Yashobhagya. The purity levels are pristine, free of contaminants, and processed to exact food-grade standards at their Gagalheri unit.",
     rating: 5
   },
   {
@@ -140,7 +140,7 @@ export default function HomeClient() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-base sm:text-xl text-[#2D2D2D]/80 leading-relaxed font-sans max-w-2xl mb-10"
         >
-          Yashobhagya Enterprises manufactures and supplies high-calorific firewood, high-density biomass briquettes, and premium grade natural mineral salts with 100% customer satisfaction.
+          Yashobhagya Enterprises manufactures and supplies  firewood, high-density biomass briquettes, and premium grade natural mineral salts with 100% customer satisfaction.
         </motion.p>
 
         <motion.div

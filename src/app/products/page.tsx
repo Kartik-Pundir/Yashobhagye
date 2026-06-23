@@ -14,7 +14,7 @@ const FALLBACK_PRODUCTS = [
     id: "fb-1",
     name: "All Varieties of Firewood",
     slug: "all-varieties-of-firewood",
-    description: "Premium mix of seasoned and split acacia, eucalyptus, and mango wood. Known for high calorific output and extremely low moisture content. Sourced sustainably.",
+    description: "Premium mix of seasoned and split acacia, eucalyptus, and mango wood. Known for  output and extremely low moisture content. Sourced sustainably.",
     category: "Firewood",
     useCases: ["Boiler Fuel", "Domestic Heating", "Commercial Cooking", "Industrial Furnaces"],
     image: "/images/firewood.jpg",
@@ -54,7 +54,7 @@ const FALLBACK_PRODUCTS = [
     id: "fb-4",
     name: "Bagasse Briquettes",
     slug: "bagasse-briquettes",
-    description: "Renewable biomass briquettes manufactured from sugarcane bagasse crop residues. Superior combustion efficiency and high calorific performance.",
+    description: "Renewable biomass briquettes manufactured from sugarcane bagasse crop residues. Superior combustion efficiency and  performance.",
     category: "Briquettes",
     useCases: ["Sugar Mill Co-generation", "Paper and Pulp Industries", "Chemical Plants", "Food Processing"],
     image: "/images/bagasse-briquettes.jpg",
@@ -181,7 +181,7 @@ export default async function ProductsPage({ searchParams }: PageProps) {
                 {
                   name: "Sisam (Sheesham)",
                   image: "/images/firewood-sisam-v2.jpg",
-                  description: "Premium high-calorific hardwood logs. Exceptional heat retention, extremely long burn time.",
+                  description: "Premium  hardwood logs. Exceptional heat retention, extremely long burn time.",
                   calorific: "4,500 - 4,800 kcal/kg"
                 },
                 {
@@ -207,10 +207,6 @@ export default async function ProductsPage({ searchParams }: PageProps) {
                     <p className="text-[11px] text-gray-500 font-sans leading-relaxed flex-grow">
                       {wood.description}
                     </p>
-                    <div className="pt-2 border-t border-gray-100">
-                      <span className="text-[9px] uppercase tracking-wider text-gray-400 font-bold block">Calorific Value</span>
-                      <span className="text-[11px] font-title font-semibold text-[#C4862A]">{wood.calorific}</span>
-                    </div>
                   </div>
                 </div>
               ))}

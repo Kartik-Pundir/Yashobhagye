@@ -71,7 +71,7 @@ async function main() {
     {
       name: 'All Varieties of Firewood',
       slug: 'all-varieties-of-firewood',
-      description: 'Premium mix of seasoned and split acacia, eucalyptus, and mango wood. Known for high calorific output and extremely low moisture content. Sourced sustainably.',
+      description: 'Premium mix of seasoned and split acacia, eucalyptus, and mango wood. Known for  output and extremely low moisture content. Sourced sustainably.',
       category: 'Firewood',
       useCases: ['Boiler Fuel', 'Domestic Heating', 'Commercial Cooking', 'Industrial Furnaces'],
       image: '/images/firewood.jpg',
@@ -107,7 +107,7 @@ async function main() {
     {
       name: 'Bagasse Briquettes',
       slug: 'bagasse-briquettes',
-      description: 'Renewable biomass briquettes manufactured from sugarcane bagasse crop residues. Superior combustion efficiency and high calorific performance.',
+      description: 'Renewable biomass briquettes manufactured from sugarcane bagasse crop residues. Superior combustion efficiency and  performance.',
       category: 'Briquettes',
       useCases: ['Sugar Mill Co-generation', 'Paper and Pulp Industries', 'Chemical Plants', 'Food Processing'],
       image: '/images/bagasse-briquettes.jpg',

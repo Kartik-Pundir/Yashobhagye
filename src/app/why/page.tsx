@@ -20,7 +20,7 @@ export default function WhyUsPage() {
       icon: <Warehouse className="w-8 h-8 text-[#C4862A]" />,
       title: "Year-Round Stock Security",
       subtitle: "Massive buffer yards shielding you from seasonal dips.",
-      description: "Seasonal crop cycles and monsoons frequently disrupt biofuel supplies. To protect our regular contract partners, we maintain buffer yards storing thousands of tons of biomass and firewood at our Gangalhedi facilities, ensuring uninterrupted deliveries 365 days a year."
+      description: "Seasonal crop cycles and monsoons frequently disrupt biofuel supplies. To protect our regular contract partners, we maintain buffer yards storing thousands of tons of biomass and firewood at our Gagalheri facilities, ensuring uninterrupted deliveries 365 days a year."
     },
     {
       icon: <Truck className="w-8 h-8 text-[#C4862A]" />,

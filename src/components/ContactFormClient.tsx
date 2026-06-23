@@ -138,7 +138,7 @@ export default function ContactFormClient() {
                   <span><strong>Corporate Locations:</strong></span>
                   <span className="block text-[11px] text-gray-400">• Roorkee Office: C-10, Sakumbari Enclave, Roorkee, Haridwar, UK - 247667</span>
                   <span className="block text-[11px] text-gray-400">• Saharanpur Office: House No. 3/3501, Kapil Vihar Colony, Saharanpur, UP - 247001</span>
-                  <span className="block text-[11px] text-gray-400">• Main Factory: Bhagwanpur Road, Opp. Dak Bungalow, Gangalhedi, Saharanpur, UP - 247341</span>
+                  <span className="block text-[11px] text-gray-400">• Main Factory: Bhagwanpur Road, Opp. Dak Bungalow, Gagalheri, Saharanpur, UP - 247341</span>
                 </div>
               </div>
             </div>

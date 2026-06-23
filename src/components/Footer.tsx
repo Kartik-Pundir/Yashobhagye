@@ -137,7 +137,7 @@ export default async function Footer() {
                 <MapPin size={16} className="text-[#C4862A] shrink-0 mt-0.5" />
                 <div className="space-y-1 text-white/75">
                   <span className="font-semibold text-white block">Main Factory Unit:</span>
-                  <span>Gangalhedi, Saharanpur, UP - 247341</span>
+                  <span>Gagalheri, Saharanpur, UP - 247341</span>
                 </div>
               </li>
               <li className="flex items-center gap-2.5 pt-2 border-t border-white/5">

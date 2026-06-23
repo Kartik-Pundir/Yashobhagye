@@ -128,7 +128,7 @@ export default function AboutPage() {
                 name: "Ranjeet Singh",
                 role: "Director",
                 initials: "RS",
-                bio: "Ranjeet Singh directs industrial production, coordinates plant safety guidelines, and manages our private transport logistics network. With comprehensive experience in bulk manufacturing operations, he maintains rigorous quality control procedures for moisture contents and calorific metrics, guaranteeing seamless direct-to-plant shipments for all corporate clients.",
+                bio: "Ranjeet Singh directs industrial production, coordinates plant safety guidelines, and manages our private transport logistics network. With comprehensive experience in bulk manufacturing operations, he maintains rigorous quality control procedures for moisture contents and heat metrics, guaranteeing seamless direct-to-plant shipments for all corporate clients.",
                 focus: "Supply Chain Management, Plant Operations & Quality Assurance"
               }
             ].map((member, idx) => (

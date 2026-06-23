@@ -98,9 +98,9 @@ export default async function ContactPage() {
                       <h4 className="font-serif text-sm font-bold text-[#1A3C2E]">Main Processing Factory</h4>
                       <p className="text-xs text-gray-500 font-sans leading-relaxed">
                         Bhagwanpur Road, Opposite Dak Bungalow,<br />
-                        Sabzi Mandi, Gangoh/Gangalhedi,<br />
+                        Sabzi Mandi, Gangoh/Gagalheri,<br />
                         Saharanpur, Uttar Pradesh – 247341.<br />
-                        <span className="font-semibold text-gray-700">PIN Code: 247341 (Gangalhedi)</span>
+                        <span className="font-semibold text-gray-700">PIN Code: 247341 (Gagalheri)</span>
                       </p>
                     </div>
                   </div>

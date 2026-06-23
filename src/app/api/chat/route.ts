@@ -30,7 +30,7 @@ export async function POST(req: Request) {
       const hasMinOrder = text.includes("minimum") || text.includes("min order") || text.includes("minimum order") || text.includes("moq") || text.includes("least quantity") || text.includes("small order")
       const hasPayment = text.includes("payment") || text.includes("pay") || text.includes("advance") || text.includes("credit") || text.includes("upi") || text.includes("bank") || text.includes("neft") || text.includes("rtgs") || text.includes("cheque")
       const hasSample = text.includes("sample") || text.includes("trial") || text.includes("test") || text.includes("demo")
-      const hasQuality = text.includes("quality") || text.includes("certif") || text.includes("iso") || text.includes("standard") || text.includes("grade") || text.includes("specification") || text.includes("moisture") || text.includes("calorific")
+      const hasQuality = text.includes("quality") || text.includes("certif") || text.includes("iso") || text.includes("standard") || text.includes("grade") || text.includes("specification") || text.includes("moisture") || text.includes("heat value")
       const hasAbout = text.includes("about") || text.includes("company") || text.includes("yashobhagya") || text.includes("who are you") || text.includes("tell me about") || text.includes("your business")
       const hasTime = text.includes("time") || text.includes("hours") || text.includes("open") || text.includes("when") || text.includes("timing") || text.includes("available")
       const hasPackaging = text.includes("packag") || text.includes("bag") || text.includes("packing") || text.includes("bundle") || text.includes("sack") || text.includes("loose")
@@ -52,7 +52,7 @@ export async function POST(req: Request) {
       } else if (hasRegister) {
         reply = "You can create a free account on our website to track your enquiries and get personalized quotes. Click the 'Register' button at the top of the page. Once registered, our sales team can set up a dedicated buyer profile for you with special contract pricing!"
       } else if (hasWarehouse) {
-        reply = "Yes! We maintain ready stock at our Gangalhedi processing unit (Saharanpur, UP). Stock availability:\n• Firewood: Available year-round\n• Briquettes: Ready stock of 500+ MT\n• Salts: Available in bulk\n\nFor urgent requirements, we can dispatch within 24-48 hours. Share your name and phone to confirm current stock for your specific product!"
+        reply = "Yes! We maintain ready stock at our Gagalheri processing unit (Saharanpur, UP). Stock availability:\n• Firewood: Available year-round\n• Briquettes: Ready stock of 500+ MT\n• Salts: Available in bulk\n\nFor urgent requirements, we can dispatch within 24-48 hours. Share your name and phone to confirm current stock for your specific product!"
       } else if (hasGst) {
         reply = "Yes, we provide proper GST invoices for all transactions. Our products fall under:\n• Firewood: HSN 4401 (5% GST)\n• Biomass Briquettes: HSN 4401 (5% GST)\n• Salts: HSN 2501 (0-5% GST depending on type)\n\nAll invoices are generated immediately on order confirmation. Share your GSTIN for B2B invoicing!"
       } else if (hasReturn) {
@@ -60,7 +60,7 @@ export async function POST(req: Request) {
       } else if (hasEnvironment) {
         reply = "Yashobhagya Enterprises is committed to sustainability! 🌿\n• Our biomass briquettes are 100% carbon-neutral — they replace coal and reduce CO₂ emissions\n• Firewood is sourced from managed plantations (Eucalyptus, Poplar) — fast-growing, sustainable species\n• Briquettes use agricultural waste (mustard husk, sugarcane bagasse) — zero waste approach\n• We are actively reducing India's dependence on fossil fuels\n\nInterested in our eco-friendly fuel solutions? Share your name and phone for details!"
       } else if (hasBoiler) {
-        reply = "Our products are ideal for industrial applications:\n• Boilers: Sawdust & Bagasse briquettes (4200-4500 Kcal/kg) — perfect drop-in coal replacement\n• Brick Kilns: Mustard briquettes (high heat, consistent burn)\n• Furnaces: Seasoned Sisam/Babul firewood (6000+ Kcal/kg)\n• Paper Mills & Sugar Plants: Bagasse briquettes\n\nWe can customize size and calorific specifications per your equipment. Share your name and phone for a technical consultation!"
+        reply = "Our products are ideal for industrial applications:\n• Boilers: Sawdust & Bagasse briquettes (4200-4500 Kcal/kg) — perfect drop-in coal replacement\n• Brick Kilns: Mustard briquettes (high heat, consistent burn)\n• Furnaces: Seasoned Sisam/Babul firewood (6000+ Kcal/kg)\n• Paper Mills & Sugar Plants: Bagasse briquettes\n\nWe can customize size and heat specifications per your equipment. Share your name and phone for a technical consultation!"
       } else if (hasBulk) {
         reply = "We specialize in bulk and wholesale supply! Benefits for bulk buyers:\n✅ Dedicated account manager\n✅ Fixed monthly contract pricing\n✅ Priority dispatch from our 500+ MT stock\n✅ 30-day credit terms (for verified buyers)\n✅ Customized packaging and labeling\n✅ Pan-India delivery via our own truck fleet\n\nMonthly volumes of 50 MT+ qualify for our premium buyer program. Share your name and phone number to get started!"
       } else if (hasCustom) {
@@ -72,11 +72,11 @@ export async function POST(req: Request) {
       } else if (hasPayment) {
         reply = "We accept all major payment modes:\n• Bank Transfer (NEFT/RTGS)\n• UPI / Google Pay\n• Cheque (for registered buyers)\n• 30-day credit terms available for verified bulk buyers\n\nFor new clients, we typically require 50% advance and 50% on dispatch. Share your name and phone to discuss credit terms with our sales team!"
       } else if (hasSample) {
-        reply = "Yes, we provide samples! Here's how:\n• Briquettes: 10-20 kg sample bags available\n• Firewood: Small bundles for calorific testing\n• Salts: 1-5 kg sample pouches\n\nSamples are dispatched via courier at actual freight cost. Please share your name, phone number, and delivery address and we'll arrange it right away!"
+        reply = "Yes, we provide samples! Here's how:\n• Briquettes: 10-20 kg sample bags available\n• Firewood: Small bundles for combustion testing\n• Salts: 1-5 kg sample pouches\n\nSamples are dispatched via courier at actual freight cost. Please share your name, phone number, and delivery address and we'll arrange it right away!"
       } else if (hasQuality) {
-        reply = "Our products meet strict quality standards:\n• Firewood: Moisture content below 15%, seasoned for 6+ months\n• Briquettes: Calorific value 3800-4500 Kcal/kg, ash content below 8%\n• Salts: Processed at our certified Gangalhedi factory\n\nWe provide quality test reports and certificates on request. Share your name and phone number for detailed specifications!"
+        reply = "Our products meet strict quality standards:\n• Firewood: Moisture content below 15%, seasoned for 6+ months\n• Briquettes:  ash content below 8%\n• Salts: Processed at our certified Gagalheri factory\n\nWe provide quality test reports and certificates on request. Share your name and phone number for detailed specifications!"
       } else if (hasAbout) {
-        reply = "Yashobhagya Enterprises is a Pan-India manufacturer and bulk supplier of premium biofuels and natural mineral salts. Founded and operated from Roorkee (Uttarakhand) and Saharanpur (Uttar Pradesh), we run our own processing plant in Gangalhedi and a self-owned fleet of 20+ cargo trucks for direct delivery across India. We serve 50+ industries including food processing, brick kilns, sugar mills, and pharmaceutical companies. How can we help you today?"
+        reply = "Yashobhagya Enterprises is a Pan-India manufacturer and bulk supplier of premium biofuels and natural mineral salts. Founded and operated from Roorkee (Uttarakhand) and Saharanpur (Uttar Pradesh), we run our own processing plant in Gagalheri and a self-owned fleet of 20+ cargo trucks for direct delivery across India. We serve 50+ industries including food processing, brick kilns, sugar mills, and pharmaceutical companies. How can we help you today?"
       } else if (hasTime) {
         reply = "Our business hours are Monday to Saturday, 9:00 AM to 7:00 PM IST. You can reach us at +91 81918 50001 or WhatsApp us at wa.me/918191850001 anytime — we respond within 2 hours during business hours. Would you like us to call you back at a specific time?"
       } else if (hasBriquette) {
@@ -84,11 +84,11 @@ export async function POST(req: Request) {
       } else if (hasFirewood) {
         reply = "We supply seasoned Liptis (Eucalyptus), Poppler (Poplar), Mix Wood, Sheesham (Sisam), and Babul logs. We size them to fit your boiler or kiln requirements and deliver PAN India. Would you like a price estimate? Please share your name and phone number!"
       } else if (hasSalt) {
-        reply = "Our salt lineup includes Rock Salt (Sendha Namak), processed Black Salt (Kala Namak), Suzi Salt, and bulk Natural Mineral Salts. They are processed at our Gangalhedi factory. What volume are you looking for? Share your name and phone number, and our sales team will get back to you shortly!"
+        reply = "Our salt lineup includes Rock Salt (Sendha Namak), processed Black Salt (Kala Namak), Suzi Salt, and bulk Natural Mineral Salts. They are processed at our Gagalheri factory. What volume are you looking for? Share your name and phone number, and our sales team will get back to you shortly!"
       } else if (hasAddress) {
-        reply = "We have branch offices in Roorkee (Sakumbari Enclave) and Saharanpur (Kapil Vihar Colony), and our main processing factory is located in Gangalhedi, Saharanpur, UP (PIN 247341). Our contact email is pundirranjeet@gmail.com. Can I help you request a quote for your area? Please share your name and phone number!"
+        reply = "We have branch offices in Roorkee (Sakumbari Enclave) and Saharanpur (Kapil Vihar Colony), and our main processing factory is located in Gagalheri, Saharanpur, UP (PIN 247341). Our contact email is pundirranjeet@gmail.com. Can I help you request a quote for your area? Please share your name and phone number!"
       } else if (hasDelivery) {
-        reply = "Yashobhagya Enterprises guarantees PAN India delivery! We manage shipping using our self-owned transport truck fleet of over 20 cargo trucks directly from our Gangalhedi processing unit. Please share your name, phone number, and delivery pin code so we can quote you shipping rates."
+        reply = "Yashobhagya Enterprises guarantees PAN India delivery! We manage shipping using our self-owned transport truck fleet of over 20 cargo trucks directly from our Gagalheri processing unit. Please share your name, phone number, and delivery pin code so we can quote you shipping rates."
       } else if (hasPrice) {
         reply = "We offer competitive contract-based wholesale pricing based on your monthly requirements. To provide a precise quote, please share your name, phone number, product interest, and monthly volume requirement."
       } else if (hasContact) {
@@ -125,7 +125,7 @@ export async function POST(req: Request) {
       - Corporate Offices: 
         1. Roorkee Branch: C-10, Sakumbari Enclave, Roorkee, Haridwar, Uttarakhand - 247667.
         2. Saharanpur Branch: House No. 3/3501, Kapil Vihar Colony, Saharanpur, Uttar Pradesh - 247001.
-        3. Main Factory Unit: Bhagwanpur Road, Opp. Dak Bungalow, Gangalhedi, Saharanpur, Uttar Pradesh - 247341.
+        3. Main Factory Unit: Bhagwanpur Road, Opp. Dak Bungalow, Gagalheri, Saharanpur, Uttar Pradesh - 247341.
       - Help customers with specifications, pricing estimates, and shipping quotes.
       Always be polite, professional, and concise. Do NOT mention names of specific directors or MDs (like Ranjeet Singh or Dr. Meena Kumari Tomar) in your answers.
       
